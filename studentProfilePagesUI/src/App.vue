@@ -1,6 +1,7 @@
 <template>
   <main>
     <HelloWorld/>
+    test
   </main>
 </template>
 
