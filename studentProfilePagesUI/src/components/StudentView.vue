@@ -1,5 +1,8 @@
 <script>
 export default {
+  props:{
+    studentId: "1"
+  },
   data: () => ({
     studentData: {
       id: undefined,
@@ -57,14 +60,14 @@ export default {
       if (methodType == "GET" && modelType == "student") {
         query = "{" + modelType + "(id:" + id + "){id firstName lastName dateOfBirth grade phone{phoneNumber phoneType} address{id addressLine1 addressLine2 city state zipCode country}}}"
       }
-      else if (methodType == "GET" && type == "students") {
-        query = "{" + modelType + "{id firstName lastName dateOfBirth grade phone{phoneNumber phoneType} address{id addressLine1 addressLine2 city state zipCode country}}}"
-      }
+      // else if (methodType == "GET" && type == "students") {
+      //   query = "{" + modelType + "{id firstName lastName dateOfBirth grade phone{phoneNumber phoneType} address{id addressLine1 addressLine2 city state zipCode country}}}"
+      // }
       return azureFunctionUri + query;
     }
   },
   mounted() {
-    this.getStudentData("1");
+    this.getStudentData("2");
   }
 }
 </script>
@@ -87,7 +90,7 @@ export default {
       {{ studentData.phone.phoneNumber }}
     </div>
     <div class="col-2 text-right">
-      <button class="btn btn-secondary btn-sm" id="btnUpdate">Update</button>&nbsp;
+      <router-link to="/edit" :studentId="studentId"><button class="btn btn-secondary btn-sm" id="btnUpdate">Update</button></router-link>&nbsp;
       <button class="btn btn-danger btn-sm" id="btnDelete">Delete</button>
     </div>
   <!-- </li> -->
