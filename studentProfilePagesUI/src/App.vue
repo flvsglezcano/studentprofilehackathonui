@@ -1,14 +1,14 @@
 <template>
   <main> 
     <div class="container-xxl">
-    <List/>
+      <router-view />
   </div>
   </main>
 </template>
 
 <script setup>
 
-import List from './components/List.vue'
+
 </script>
 
 <style scoped>

@@ -1,6 +1,6 @@
 <script setup >
-import StudentView from './StudentView.vue';
-import Edit from './Edit.vue';
+import StudentView from '../components/StudentView.vue';
+
 
 </script>
 <template>
@@ -24,7 +24,7 @@ import Edit from './Edit.vue';
     </div>
 
   </div>
-  <Edit/>
+  
 </template>
 
 <style scope>
