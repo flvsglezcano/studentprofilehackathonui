@@ -1,17 +1,8 @@
-<script setup>
+<script>
 
-import {ref } from "vue";
-
-/**
- * Props
- */
- const props = defineProps({
-  studentId: { type:String, required: true, default: () => "0" }
-});
-const save = (model) => {
-  //TODO
-  console.log("model saved");
-};
+export default {
+  props:["studentData"]
+}
 
 </script>
 <template>

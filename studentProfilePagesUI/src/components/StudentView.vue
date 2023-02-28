@@ -1,5 +1,6 @@
 <script>
 export default {
+
   data: () => ({
     studentData: {
       id: undefined,
@@ -87,7 +88,8 @@ export default {
       {{ studentData.phone.phoneNumber }}
     </div>
     <div class="col-2 text-right">
-      <button class="btn btn-secondary btn-sm" id="btnUpdate">Update</button>&nbsp;
+        <router-link to="/edit" :student="studentData"><button class="btn btn-secondary btn-sm" id="btnUpdate">Update</button></router-link>&nbsp;
+   
       <button class="btn btn-danger btn-sm" id="btnDelete">Delete</button>
     </div>
   <!-- </li> -->

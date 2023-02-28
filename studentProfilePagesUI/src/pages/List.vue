@@ -1,15 +1,30 @@
 <script setup >
 import StudentView from '../components/StudentView.vue';
 
-/**
- * Props
- */
- const newStudentId = { type:String, required: true, default: () => "0" };
+ const studentData = ({    
+      id: "",
+      firstName: "",
+      lastName: "",
+      grade: "",
+      dateOfBirth: "",
+      phone: {
+        phoneNumber: "",
+        phoneType:"",
+      },
+      address: {
+        addressLine1:"",
+        addressLine2:"",
+        city: "",
+        state: "",
+        zipCode: "",
+        country: "",
+      }  
+  });
 </script>
 <template>
   <h1 class="green">Students</h1>
   <div  id="divStudents">    
-     <p class="text-right"><router-link to="/edit" :studentId="newStudentId"><button class="btn btn-success" id="btnCreate">Create</button></router-link></p>
+     <p class="text-right"><router-link to="/edit" :student="studentData"><button class="btn btn-success" id="btnCreate">Create</button></router-link></p>
   
     <hr/>
     <div class="row" id="divListHeader">
