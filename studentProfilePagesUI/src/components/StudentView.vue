@@ -1,4 +1,9 @@
 <script setup>
+ const props = defineProps({
+  ["studentId"]: { type:String}
+});
+ 
+
 </script>
 <template>
   <div class="col-1">1</div>
@@ -16,8 +21,8 @@
     (123) 456-7890
   </div>
   <div class="col-2 text-right">
-    <button class="btn btn-secondary btn-sm" id="btnUpdate">Update</button
-    >&nbsp;
-    <button class="btn btn-danger btn-sm" id="btnDelete">Delete</button>
-  </div>
+    <router-link to="/edit" :studentId="studentId"><button class="btn btn-secondary btn-sm" id="btnUpdate">Update</button></router-link>&nbsp;
+    <button class="btn btn-danger btn-sm" id="btnDelete" >Delete</button>
+  </div>   
+
 </template>
