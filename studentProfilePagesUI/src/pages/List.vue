@@ -1,12 +1,15 @@
 <script setup >
 import StudentView from '../components/StudentView.vue';
 
-
+/**
+ * Props
+ */
+ const newStudentId = { type:String, required: true, default: () => "0" };
 </script>
 <template>
   <h1 class="green">Students</h1>
   <div  id="divStudents">    
-     <p class="text-right"><button class="btn btn-small  btn-success" id="btnCreate" @click= "openEditForm(0)">Create</button></p>
+     <p class="text-right"><router-link to="/edit" :studentId="newStudentId"><button class="btn btn-success" id="btnCreate">Create</button></router-link></p>
   
     <hr/>
     <div class="row" id="divListHeader">

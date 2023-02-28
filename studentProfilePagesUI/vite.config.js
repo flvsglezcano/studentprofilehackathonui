@@ -7,7 +7,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue(), Pages({
     dirs:
-    'src/views',
+    'src/pages',
   })],
   resolve: {
     alias: {
